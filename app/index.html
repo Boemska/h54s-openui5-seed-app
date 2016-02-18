@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta charset="UTF-8">
+    <title>My OpenUI5 with h54s app</title>
+
+    <script id='sap-ui-bootstrap'
+      src="https://openui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+      data-sap-ui-theme='sap_bluecrystal'
+      data-sap-ui-libs='sap.m,sap.ui.layout,sap.ui.table,sap.ui.commons'
+      data-sap-ui-xx-bindingSyntax="complex"
+      data-sap-ui-resourceroots='{
+        "myApp": "./"
+      }'>
+    </script>
+
+    <script>
+      sap.ui.getCore().attachInit(function() {
+        sap.ui.jsview("RootView", "myApp.view.Root").placeAt('root');
+      });
+    </script>
+
+    <script src="bower_components/h54s/dist/h54s.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

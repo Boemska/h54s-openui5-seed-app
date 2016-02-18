@@ -1,0 +1,27 @@
+{
+  "name": "h54s-sap-openui5-seed-app",
+  "description": "A starter project for SAP OpenUI5 using h54s SAS adapter",
+  "main": "index.js",
+  "authors": [
+    "Boemskats"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "SAP",
+    "SAS",
+    "OpenUI5",
+    "h54s"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "h54s": "^0.8.1"
+  }
+}

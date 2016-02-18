@@ -4,7 +4,9 @@
   "description": "A starter project for SAP OpenUI5 using h54s SAS adapter",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install",
+    "server": "http-server app/ -a localhost -p 8000 -c-1"
   },
   "keywords": [
     "SAP",
@@ -13,5 +15,8 @@
     "h54s"
   ],
   "author": "Boemskats",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "http-server": "^0.8.5"
+  }
 }
