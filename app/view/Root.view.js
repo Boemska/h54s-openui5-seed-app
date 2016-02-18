@@ -21,7 +21,7 @@ sap.ui.define([
         text: 'Debug',
         pressed: new SasAdapter().isDebugSet(),
         press: function() {
-          this.pressed = true;
+          adapter.toggleDebugMode();
         }
       });
 

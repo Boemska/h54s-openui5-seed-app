@@ -61,6 +61,14 @@ sap.ui.define([
       this._adapter.unsetDebugMode();
     },
 
+    toggleDebugMode: function() {
+      if(this._adapter.debug) {
+        this._adapter.unsetDebugMode();
+      } else {
+        this._adapter.setDebugMode();
+      }
+    },
+
     isDebugSet: function() {
       return this._adapter.debug;
     },
