@@ -1,5 +1,6 @@
 sap.ui.define([
-], function() {
+  'myApp/SasAdapter'
+], function(SasAdapter) {
   var model = new sap.ui.model.json.JSONModel();
   var dialog;
 
@@ -56,12 +57,12 @@ sap.ui.define([
                   //synchronious require because it's undefined if required asynchronously
                   //circular dependency (LoginDialog is required by SasAdapter too)
                   //TODO: fix?
-                  jQuery.sap.require("h54s.SasAdapter");
+                  jQuery.sap.require("myApp.SasAdapter");
                   var data = model.getData();
                   if(!data.user || !data.pass) {
                     messageText.setText('Credentials not set').addStyleClass('sapThemeCriticalText').rerender();
                   } else {
-                    new h54s.sasAdapter().login(data.user, data.pass, function(errMsg) {
+                    new myApp.sasAdapter().login(data.user, data.pass, function(errMsg) {
                       if(errMsg) {
                         messageText.setText(errMsg).addStyleClass('sapThemeCriticalText').rerender();
                       } else {
